@@ -1,0 +1,10 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+#container {
+  width: 7202px;
+  height: 3602px;
+  border: solid 1px black;
+}
