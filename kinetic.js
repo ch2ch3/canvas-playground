@@ -2,8 +2,8 @@ $(document).ready(function() {
 
   var stage = new Kinetic.Stage({
     container: 'container',
-    width: 7200,
-    height: 3600
+    width: 14400,
+    height: 7200
   });
 
   var layer = new Kinetic.Layer();
@@ -17,8 +17,8 @@ $(document).ready(function() {
   dataArray.forEach(function(point){
     layer.add(
       new Kinetic.Rect({
-        x: (point[1]+180)*20,
-        y: (180-(point[0]+90))*20,
+        x: (point[1]+180)*40,
+        y: (180-(point[0]+90))*40,
         width: 2,
         height: 2,
         fill: 'black',
