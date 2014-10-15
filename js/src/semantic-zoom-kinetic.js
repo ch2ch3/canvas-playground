@@ -6,7 +6,7 @@ $(document).ready(function(){
   stage = new Kinetic.Stage({
     container: 'container',
     width: 1200,
-    height: 1024,
+    height: 500,
     draggable: true
   });
 
