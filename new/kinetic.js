@@ -77,19 +77,19 @@ $(document).ready(function(){
   $('#scaleUp').on('click', function(){
     tween.play()
 
-    shapes.each(function(shape) {          
+    shapes.forEach(function(shape) {          
       tweens.push(new Kinetic.Tween({
         node: shape, 
         duration: 0.5,
-        scaleX: .666666667,
-        scaleY: .666666667,
+        scaleX: 0.666666667,
+        scaleY: 0.666666667,
       }).play());
     });
   })
 
   $('#scaleDown').on('click', function(){
     tween.reverse();
-    tweens.each(function(tween){
+    tweens.forEach(function(tween){
       tween.reverse();
     })
   })
