@@ -27,12 +27,30 @@
 </head>
 <body>
 
+  <button id="show">Show overlay</button>
+  <button id="hide">Hide overlay</button>
+  <br clear="all">
+
 <!-- Original code from http://bl.ocks.org/mbostock/3681006 -->
 
   <canvas id="canvas1"></canvas>
   <canvas id="canvas2"></canvas>
 
+<script src="js/lib/jquery-2.1.1.min.js"></script>
 <script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+  $(document).ready(function(){
+
+    $('#hide').on('click', function(){
+      $('#canvas2').css('opacity', '0.0')
+    })
+
+    $('#show').click(function(){
+      $('#canvas2').css('opacity', '1.0')
+    })
+
+  })
+</script>
 <script>
 
   var width = 960,
@@ -94,17 +112,17 @@
 
   function draw2() {
     canvas2.beginPath();
-    canvas2.moveTo(x(width/3), y(0))
-    canvas2.lineTo(x(width/3), y(height))
-    canvas2.lineWidth = 4
-    canvas2.strokeStyle = 'green'
+    canvas2.moveTo(x(width/3), y(-100))
+    canvas2.lineTo(x(width/3), y(height+100))
+    canvas2.lineWidth = 2
+    canvas2.strokeStyle = 'rgba(0,255,0,0.5)'
     canvas2.stroke();
 
     canvas2.beginPath();
-    canvas2.moveTo(x(width/2), y(0))
-    canvas2.lineTo(x(width/2), y(height))
-    canvas2.lineWidth = 4
-    canvas2.strokeStyle = 'green'
+    canvas2.moveTo(x(width/2), y(-100))
+    canvas2.lineTo(x(width/2), y(height+100))
+    canvas2.lineWidth = 2
+    canvas2.strokeStyle = 'rgba(0,255,0,0.5)'
     canvas2.stroke();
   }
 
