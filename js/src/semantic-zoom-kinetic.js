@@ -1,7 +1,6 @@
-var stage, layer;
+var stage, layer, context;
 
 $(document).ready(function(){
-
   
   stage = new Kinetic.Stage({
     container: 'container',

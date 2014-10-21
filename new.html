@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  
+  <script src="js/lib/jquery-2.1.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      window.onload = window.onresize = function() {
+        var canvas = document.getElementById("canvas");
+
+        var viewportWidth = window.innerWidth;
+        var viewportHeight = window.innerHeight;
+
+        var canvasWidth = viewportWidth;
+        var canvasHeight = canvasWidth / 2;
+        canvas.style.position = "fixed";
+        canvas.setAttribute("width", canvasWidth);
+        canvas.setAttribute("height", canvasHeight);
+        canvas.style.top = (viewportHeight - canvasHeight) / 2;
+        canvas.style.left = (viewportWidth - canvasWidth) / 2;
+
+        window.ctx = canvas.getContext("2d");
+        ctx.clearRect(0,0,canvasWidth,canvasHeight);
+        ctx.fillStyle = 'yellow';
+        ctx.moveTo(0, canvasHeight/2);
+        ctx.lineTo(canvasWidth/2, 0);
+        ctx.lineTo(canvasWidth, canvasHeight/2);
+        ctx.lineTo(canvasWidth/2, canvasHeight);
+        ctx.lineTo(0, canvasHeight/2);
+        ctx.fill()
+
+        
+      }
+    })
+  </script>
+</head>
+<body>
+  <canvas id="canvas" style="background: black">
+  </canvas>
+</body>
+</html>

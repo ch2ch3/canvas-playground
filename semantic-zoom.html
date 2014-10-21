@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <style>
+    canvas {
+      border: solid 1px black;
+    }
+  </style>
 </head>
 <body>
   
-  <section id="graph">
-    <div id="container"></div>
-  </section>
+  <div id="container"></div>
+  <canvas id="canvas" width="1200" height="500"></canvas>
 
   <h2 id="label">Click a button to zoom</h2>
 
@@ -16,8 +20,9 @@
   <button id="scaleDown">Scale down</button>
 
 
-  <script src="js/lib/kinetic-v5.1.0.min.js"></script>
+  <!-- <script src="js/lib/kinetic-v5.1.0.min.js"></script> -->
   <script src="js/lib/jquery-2.1.1.min.js"></script>
-  <script defer="defer" src="js/src/semantic-zoom-kinetic.js"></script>
+  <script src="js/src/no-kinetic.js"></script>
+  <!-- // <script defer="defer" src="js/src/semantic-zoom-kinetic.js"></script> -->
 </body>
 </html>
